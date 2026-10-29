@@ -7,7 +7,7 @@ Publicado em https://azeugral.github.io/debora-regina/ (com `noindex` até a apr
 ## Página
 
 `index.html`, numa página só, com estas secções:
-- **Hero:** monograma DR dela (vetorizado do cartão oficial), com linhas finas douradas em shader (`assets/linhas.js`).
+- **Hero:** monograma DR dela (vetorizado do cartão oficial) sobre um quadro parado das linhas finas douradas (`assets/linhas.js`).
 - **Frase e valores.**
 - **Portas:** Tatuagem e Piercing.
 - **Trabalhos:** 28 fotos com filtro (fine line, blackwork e pontilhismo, lettering, piercing) e foto ampliada.
@@ -15,14 +15,14 @@ Publicado em https://azeugral.github.io/debora-regina/ (com `noindex` até a apr
 - **Vale-presente.**
 - **Marcações:** a política de sinal dela, tirada do post "Política de Marcações", e a Klarna 3x.
 - **Sobre.**
-- **Pedido:** formulário que monta a mensagem para o WhatsApp.
+- **Pedido:** formulário que monta a mensagem para o WhatsApp, com as linhas douradas animadas no fundo.
 
 O texto está em português de Portugal e trata o cliente por "tu", como nas legendas dela.
 
 ## Identidade
 
 - **Cores:** breu `#0c0a09` e o dourado do monograma DR `#cfa271`; o rosa `#d98aa0` só aparece no piercing, como no cartaz "Novo serviço: piercings".
-- **Fontes:** Cinzel (o nome do cartão oficial é numa romana em caixa alta) e Hanken Grotesk.
+- **Fontes:** Bodoni Moda nos títulos e Hanken Grotesk no texto.
 - **Logo:** o DR é a arte dela vetorizada (`tools/logo.py`). A coroa e o arabesco do original eram finos demais para vetorizar e foram redesenhados à mão em SVG.
 
 ## Ferramentas
@@ -41,6 +41,7 @@ python -I tools/og.py         # og.jpg
 - [ ] **Vale-presente:** valores e se vale para piercing também (o destaque "Presente" não foi lido).
 - [ ] **Flashes disponíveis:** o destaque "P. Disponível" pode virar uma galeria de flashes.
 - [ ] **Horário** de atendimento.
+- [ ] **Foto do "Sobre"**: retrato enviado em 29/10 (`_ref/debora-retrato.jpg`, 677 px; pedir o original em alta).
 - [ ] **Texto do "Sobre"** e o uso das fotos das clientes.
 - [ ] **Instagram de piercing:** @debora.regink aparece nos cartazes. Decidir se entra no rodapé.
 - [ ] **Domínio** (sugestão: deboraregina.pt) e remover o `noindex`.

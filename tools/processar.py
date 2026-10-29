@@ -22,12 +22,14 @@ FOTOS = {
     "orelha-trio": (3, 1, .4), "orelha-mix": (12, 1, .45), "orelha-dourado": (25, 1, .5), "orelha-ponto-luz": (27, 1, .45),
     "nariz": (14, 1, .45), "nostril": (30, 1, .45), "microdermal-rosto": (10, 1, .4), "microdermal-face": (39, 1, .45),
     "microdermal-peito": (43, 1, .5), "umbigo": (28, 1, .5), "orelha-loira": (52, 1, .45),
-    # retrato dela
-    "debora": (131, 1, .35),
+    # retrato dela (foto enviada pelo usuário, _ref/debora-retrato.jpg; foco horizontal no rosto)
+    "debora": ("debora-retrato.jpg", 0, .5),
 }
 
 
 def achar(n, k):
+    if isinstance(n, str):
+        return IG.parent / n
     for f in IG.glob(f"{n:03d}_*_{k}.jpg"):
         return f
     raise SystemExit(f"post {n} foto {k} não encontrado")
