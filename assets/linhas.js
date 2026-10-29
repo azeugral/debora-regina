@@ -1,8 +1,8 @@
 /* Linhas finas douradas sobre o breu, como traço de fine line, com alguns pontos de luz
    (o "ponto de luz" das joias de piercing). As linhas são curvas de nível de um campo de ruído;
    a espessura é medida em pixels pelo gradiente (3 amostras), então ficam com ~1 px em qualquer ecrã.
-   Hero: um quadro parado, com o centro escuro para o logo. Agendamento (#marcar): animado, o traço
-   desenha-se quando a secção entra no ecrã e depois escorre devagar.
+   Hero e agendamento (#marcar): o traço desenha-se quando a secção entra no ecrã e depois escorre
+   devagar; no hero o centro fica escuro para o logo. Sem efeito de rato.
    `t` = tempo em s; `ent` = 0→1 (o traço a ser desenhado); `mio` = escurece o centro; `luz` = intensidade. */
 (function () {
   const FS = `precision highp float;
@@ -36,10 +36,10 @@ void main(){
   float corre=fract(h(vec2(k,9.7))+(p.x*.35+p.y*.2));
   float desenhado=smoothstep(corre-.02,corre+.02,ent*1.25-.12);
   // centro mais escuro para o logo e o título
-  vec2 c=p*vec2(mix(.85,1.25,cel),1.);
+  vec2 c=p*vec2(mix(.52,.9,cel),1.);
   float miolo=mix(1.,smoothstep(.12,.62,length(c-vec2(0.,mix(.02,.06,cel)))),mio);
   float borda=smoothstep(1.35,.45,length(p*vec2(.6,1.)));
-  vec3 ouro=vec3(.86,.66,.44), claro=vec3(1.,.88,.7);
+  vec3 ouro=vec3(.87,.63,.27), claro=vec3(1.,.87,.56);
   vec3 col=vec3(.047,.039,.035);
   float brilhoTom=.5+.5*sin(k*1.7+t*.25);
   col+=mix(ouro,claro,brilhoTom*.4)*(linha*.85+halo)*desenhado*miolo*(.55+.45*borda)*luz;
@@ -115,7 +115,7 @@ void main(){
   }
 
   const hero = document.getElementById('linhas');
-  if (hero) ligar(hero, { anima: false, miolo: true, luz: 1, fase: 40 });
+  if (hero) ligar(hero, { anima: true, miolo: true, luz: 1, fase: 40 });
   const fundo = document.getElementById('linhas-marcar');
   if (fundo) ligar(fundo, { anima: true, miolo: false, luz: .62, fase: 12 });
 })();

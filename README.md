@@ -1,4 +1,4 @@
-# Débora Regina Ink · Tatuagem e piercing
+# Débora Regina · Tattoos & Piercings
 
 Prévia do site da Débora Regina ([@deboraregina.ink](https://www.instagram.com/deboraregina.ink/)), tatuadora e body piercer no Espaço Beleza, em Agualva-Cacém (Sintra, Portugal).
 
@@ -7,7 +7,7 @@ Publicado em https://azeugral.github.io/debora-regina/ (com `noindex` até a apr
 ## Página
 
 `index.html`, numa página só, com estas secções:
-- **Hero:** monograma DR dela (vetorizado do cartão oficial) sobre um quadro parado das linhas finas douradas (`assets/linhas.js`).
+- **Hero:** logo oficial dela (com um reflexo dourado que corre pelas letras) sobre linhas finas douradas animadas em shader (`assets/linhas.js`).
 - **Frase e valores.**
 - **Portas:** Tatuagem e Piercing.
 - **Trabalhos:** 28 fotos com filtro (fine line, blackwork e pontilhismo, lettering, piercing) e foto ampliada.
@@ -21,14 +21,14 @@ O texto está em português de Portugal e trata o cliente por "tu", como nas leg
 
 ## Identidade
 
-- **Cores:** breu `#0c0a09` e o dourado do monograma DR `#cfa271`; o rosa `#d98aa0` só aparece no piercing, como no cartaz "Novo serviço: piercings".
-- **Fontes:** Bodoni Moda nos títulos e Hanken Grotesk no texto.
-- **Logo:** o DR é a arte dela vetorizada (`tools/logo.py`). A coroa e o arabesco do original eram finos demais para vetorizar e foram redesenhados à mão em SVG.
+- **Cores:** breu `#0c0a09` e o dourado metálico do logo oficial (`#d6a44e`, gradiente `--metal` nos botões e preços); o rosa `#d98aa0` só aparece no piercing, como no cartaz "Novo serviço: piercings".
+- **Fontes:** Bodoni Moda nos títulos, Pinyon Script nas frases de destaque (eco do script do logo) e Hanken Grotesk no texto.
+- **Logo:** arte oficial "Débora Regina · Tattoos & Piercings" (`_ref/logo-oficial.webp`, já transparente). `tools/logo.py` gera os tamanhos, a coroa recortada (vale-presente e favicon) e os favicons.
 
 ## Ferramentas
 
 ```
-python -I tools/logo.py       # dr.svg, favicons e o <symbol id="dr"> no index.html
+python -I tools/logo.py       # logo.webp, logo-800.webp, coroa.webp e favicons
 python -I tools/processar.py  # fotos 4:5 a partir de ../_ref/ig (extração do Instagram)
 python -I tools/og.py         # og.jpg
 ```
